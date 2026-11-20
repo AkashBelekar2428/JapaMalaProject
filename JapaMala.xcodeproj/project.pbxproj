@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		0FBFB5E6DEFDC5D35A90290C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A9DEBC50627301C3C81DE15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3840C91E30B07F50000F13DB;
+			remoteInfo = JapaMala;
+		};
+		8E4F0723347DAF449FAAADC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A9DEBC50627301C3C81DE15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3840C91E30B07F50000F13DB;
+			remoteInfo = JapaMala;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3840C91F30B07F50000F13DB /* JapaMala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaMala.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3840C92C30B07F51000F13DB /* JapaMalaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JapaMalaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3840C93630B07F51000F13DB /* JapaMalaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JapaMalaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		080E9C495C428653A055333F /* JapaMala */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = JapaMala;
+			sourceTree = "<group>";
+		};
+		142D4E5397D11F01B6670E6A /* JapaMalaTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = JapaMalaTests;
+			sourceTree = "<group>";
+		};
+		B0A370CD0D2B2306557556DA /* JapaMalaUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = JapaMalaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57FD8F13165FBFBADE6AAE43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		C93F0D524E5351226856C233 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		F92D516ACF756B461B59511E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0147A9268DE9633DB9E67287 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3840C91F30B07F50000F13DB /* JapaMala.app */,
+				3840C92C30B07F51000F13DB /* JapaMalaTests.xctest */,
+				3840C93630B07F51000F13DB /* JapaMalaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		597E0A6F718528150B668C94 = {
+			isa = PBXGroup;
+			children = (
+				080E9C495C428653A055333F /* JapaMala */,
+				142D4E5397D11F01B6670E6A /* JapaMalaTests */,
+				B0A370CD0D2B2306557556DA /* JapaMalaUITests */,
+				0147A9268DE9633DB9E67287 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3840C91E30B07F50000F13DB /* JapaMala */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D02CC7101551783DB8BF0557 /* Build configuration list for PBXNativeTarget "JapaMala" */;
+			buildPhases = (
+				0E9FE50C1128E81536F3FE26 /* Sources */,
+				57FD8F13165FBFBADE6AAE43 /* Frameworks */,
+				2BD36D1502A4E21C8F630271 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				080E9C495C428653A055333F /* JapaMala */,
+			);
+			name = JapaMala;
+			productName = JapaMala;
+			productReference = 3840C91F30B07F50000F13DB /* JapaMala.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3840C92B30B07F51000F13DB /* JapaMalaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C82C059BAC02CB8AA4005AB9 /* Build configuration list for PBXNativeTarget "JapaMalaTests" */;
+			buildPhases = (
+				2B89F22A05A34E68111E3E20 /* Sources */,
+				C93F0D524E5351226856C233 /* Frameworks */,
+				A92C7DA9F37F6FFE308C249D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31DD1C71C2B0724565084B7B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				142D4E5397D11F01B6670E6A /* JapaMalaTests */,
+			);
+			name = JapaMalaTests;
+			productName = JapaMalaTests;
+			productReference = 3840C92C30B07F51000F13DB /* JapaMalaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3840C93530B07F51000F13DB /* JapaMalaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4822CFA7CFE71F63491108B /* Build configuration list for PBXNativeTarget "JapaMalaUITests" */;
+			buildPhases = (
+				B18CB5C85F505960ACC17F1A /* Sources */,
+				F92D516ACF756B461B59511E /* Frameworks */,
+				BD33E9EA540EFC02E68058C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B556AFCDDC670E6E017F0D22 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B0A370CD0D2B2306557556DA /* JapaMalaUITests */,
+			);
+			name = JapaMalaUITests;
+			productName = JapaMalaUITests;
+			productReference = 3840C93630B07F51000F13DB /* JapaMalaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A9DEBC50627301C3C81DE15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2720;
+				LastUpgradeCheck = 2720;
+				TargetAttributes = {
+					3840C92B30B07F51000F13DB = {
+						TestTargetID = 3840C91E30B07F50000F13DB;
+					};
+					3840C93530B07F51000F13DB = {
+						TestTargetID = 3840C91E30B07F50000F13DB;
+					};
+				};
+			};
+			buildConfigurationList = ED06C82D2BE793C8828635B1 /* Build configuration list for PBXProject "JapaMala" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 597E0A6F718528150B668C94;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 110;
+			productRefGroup = 0147A9268DE9633DB9E67287 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3840C91E30B07F50000F13DB /* JapaMala */,
+				3840C92B30B07F51000F13DB /* JapaMalaTests */,
+				3840C93530B07F51000F13DB /* JapaMalaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BD36D1502A4E21C8F630271 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		A92C7DA9F37F6FFE308C249D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		BD33E9EA540EFC02E68058C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E9FE50C1128E81536F3FE26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		2B89F22A05A34E68111E3E20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		B18CB5C85F505960ACC17F1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31DD1C71C2B0724565084B7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3840C91E30B07F50000F13DB /* JapaMala */;
+			targetProxy = 8E4F0723347DAF449FAAADC5 /* PBXContainerItemProxy */;
+		};
+		B556AFCDDC670E6E017F0D22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3840C91E30B07F50000F13DB /* JapaMala */;
+			targetProxy = 0FBFB5E6DEFDC5D35A90290C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		497F5206E7349B84C4FBED51 /* Release configuration for PBXNativeTarget "JapaMala" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSPZB927X3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = JapaMala;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akashbelekar.JapaMala;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		62A5EFC0FCD687790FAA8BC5 /* Debug configuration for PBXNativeTarget "JapaMalaTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akashbelekar.JapaMalaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JapaMala.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JapaMala";
+			};
+			name = Debug;
+		};
+		8FB414F9BAF6D11709C48B2B /* Release configuration for PBXProject "JapaMala" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93146A975B197DBCC83BA5CD /* Debug configuration for PBXProject "JapaMala" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95262FFF860461402D507D4B /* Release configuration for PBXNativeTarget "JapaMalaUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akashbelekar.JapaMalaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JapaMala;
+			};
+			name = Release;
+		};
+		B1E062D1E1FC03DF9BDEE025 /* Release configuration for PBXNativeTarget "JapaMalaTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akashbelekar.JapaMalaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JapaMala.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JapaMala";
+			};
+			name = Release;
+		};
+		B98FDFB19AF3C0CC49A7FD37 /* Debug configuration for PBXNativeTarget "JapaMala" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSPZB927X3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = JapaMala;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akashbelekar.JapaMala;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAE57D55AD7CCA3A7CE79501 /* Debug configuration for PBXNativeTarget "JapaMalaUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akashbelekar.JapaMalaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JapaMala;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4822CFA7CFE71F63491108B /* Build configuration list for PBXNativeTarget "JapaMalaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE57D55AD7CCA3A7CE79501 /* Debug configuration for PBXNativeTarget "JapaMalaUITests" */,
+				95262FFF860461402D507D4B /* Release configuration for PBXNativeTarget "JapaMalaUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		C82C059BAC02CB8AA4005AB9 /* Build configuration list for PBXNativeTarget "JapaMalaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A5EFC0FCD687790FAA8BC5 /* Debug configuration for PBXNativeTarget "JapaMalaTests" */,
+				B1E062D1E1FC03DF9BDEE025 /* Release configuration for PBXNativeTarget "JapaMalaTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		D02CC7101551783DB8BF0557 /* Build configuration list for PBXNativeTarget "JapaMala" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B98FDFB19AF3C0CC49A7FD37 /* Debug configuration for PBXNativeTarget "JapaMala" */,
+				497F5206E7349B84C4FBED51 /* Release configuration for PBXNativeTarget "JapaMala" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		ED06C82D2BE793C8828635B1 /* Build configuration list for PBXProject "JapaMala" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93146A975B197DBCC83BA5CD /* Debug configuration for PBXProject "JapaMala" */,
+				8FB414F9BAF6D11709C48B2B /* Release configuration for PBXProject "JapaMala" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A9DEBC50627301C3C81DE15 /* Project object */;
+	validationLevel = 1;
+}
