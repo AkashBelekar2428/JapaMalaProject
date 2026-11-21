@@ -10,6 +10,7 @@ target 'JapaMala' do
   target 'JapaMalaTests' do
     inherit! :search_paths
     # Pods for testing
+      pod 'lottie-ios'
   end
 
   target 'JapaMalaUITests' do
