@@ -6,6 +6,10 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		389E423630B16D8200EAEDDC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 389E423530B16D8200EAEDDC /* Lottie */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0FBFB5E6DEFDC5D35A90290C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -22,6 +26,17 @@
 			remoteInfo = JapaMala;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		389E423A30B16DB800EAEDDC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = Frameworks;
+			files = (
+			);
+			name = "Embed Frameworks";
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3840C91F30B07F50000F13DB /* JapaMala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaMala.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +66,7 @@
 		57FD8F13165FBFBADE6AAE43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				389E423630B16D8200EAEDDC /* Lottie in Frameworks */,
 			);
 		};
 		C93F0D524E5351226856C233 /* Frameworks */ = {
@@ -96,6 +112,7 @@
 				0E9FE50C1128E81536F3FE26 /* Sources */,
 				57FD8F13165FBFBADE6AAE43 /* Frameworks */,
 				2BD36D1502A4E21C8F630271 /* Resources */,
+				389E423A30B16DB800EAEDDC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,6 +120,9 @@
 				080E9C495C428653A055333F /* JapaMala */,
 			);
 			name = JapaMala;
+			packageProductDependencies = (
+				389E423530B16D8200EAEDDC /* Lottie */,
+			);
 			productName = JapaMala;
 			productReference = 3840C91F30B07F50000F13DB /* JapaMala.app */;
 			productType = "com.apple.product-type.application";
@@ -176,6 +196,9 @@
 			);
 			mainGroup = 597E0A6F718528150B668C94;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				389E423430B16D8200EAEDDC /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 110;
 			productRefGroup = 0147A9268DE9633DB9E67287 /* Products */;
 			projectDirPath = "";
@@ -254,7 +277,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,7 +491,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,7 +564,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		389E423430B16D8200EAEDDC /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		389E423530B16D8200EAEDDC /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389E423430B16D8200EAEDDC /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A9DEBC50627301C3C81DE15 /* Project object */;
-	validationLevel = 1;
 }
