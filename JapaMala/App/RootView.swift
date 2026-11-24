@@ -29,12 +29,17 @@ struct RootView: View {
                 switch selectedTab {
 
                 case .home:
-                    HomeView {
-                        navigateToTab(.chant)
-                    }
+                    HomeView(
+                        onBeginPractice: {
+                            selectedTab = .chant
+                        },
+                        onSettingsTap: {
+                            // Navigate to Settings screen
+                        }
+                    )
 
                 case .chant:
-                    TabPlaceholderView(tab: .chant)
+                    ChantView()
 
                 case .mantras:
                     TabPlaceholderView(tab: .mantras)

@@ -72,7 +72,10 @@ struct CustomTabBar: View {
                                 )
                         }
                     }
-                    .contentShape(Rectangle())
+                    .malaGlass(
+                        in: RoundedRectangle(cornerRadius: 24)
+                    )
+            
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel(tab.title)
