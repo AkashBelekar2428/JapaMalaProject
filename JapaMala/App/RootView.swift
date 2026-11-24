@@ -42,7 +42,7 @@ struct RootView: View {
                     ChantView()
 
                 case .mantras:
-                    TabPlaceholderView(tab: .mantras)
+                    MantraView()
 
                 case .journey:
                     TabPlaceholderView(tab: .journey)
