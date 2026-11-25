@@ -4,9 +4,11 @@
 //
 //  Created by Akash Belekar on 20/11/26.
 //
-import SwiftUI
 
-//MARK: Application entry point
+import SwiftUI
+import SwiftData
+
+// MARK: - Application Entry Point
 
 @main
 struct JapaMalaApp: App {
@@ -17,18 +19,28 @@ struct JapaMalaApp: App {
 
         WindowGroup {
 
-            if showHome {
-                RootView()
-                
-            } else {
+            Group {
 
-                SplashView {
-                    withAnimation(.easeInOut(duration: 0.5)) {
-                        showHome = true
+                if showHome {
+
+                    RootView()
+
+                } else {
+
+                    SplashView {
+                        withAnimation(.easeInOut(duration: 0.5)) {
+                            showHome = true
+                        }
                     }
                 }
             }
+            .modelContainer(
+                for: [
+                    JapaSession.self
+                ]
+            )
         }
     }
 }
+
 

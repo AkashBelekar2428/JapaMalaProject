@@ -16,6 +16,7 @@ import SwiftUI
 struct RootView: View {
 
     @State private var selectedTab: AppTab = .home
+    @State private var showSettings = false
 
     var body: some View {
 
@@ -35,17 +36,21 @@ struct RootView: View {
                         },
                         onSettingsTap: {
                             // Navigate to Settings screen
+                            showSettings = true
                         }
                     )
+                    .sheet(isPresented: $showSettings) {
+                        SettingsView()
+                    }
 
                 case .chant:
                     ChantView()
 
                 case .mantras:
-                    TabPlaceholderView(tab: .mantras)
+                    MantraView()
 
                 case .journey:
-                    TabPlaceholderView(tab: .journey)
+                    JourneyView()
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
