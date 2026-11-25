@@ -9,6 +9,7 @@
 import SwiftUI
 import AudioToolbox
 import UIKit
+import SwiftData
 
 struct ChantView: View {
 
@@ -23,19 +24,18 @@ struct ChantView: View {
     @State private var isCelebrating = false
     // MARK: - Chant Options
 
-    private let chantOptions = [5, 11, 21, 51, 101, 108]
+    private let chantOptions = [11, 21, 51, 108]
 
     private let mantraOptions = [
         "Om Namah Shivaya",
         "Om Namo Bhagavate Vasudevaya",
         "Om Namo Narayanaya",
         "Om Gan Ganapataye Namah",
-        "Hare Krishna"
     ]
 
     // MARK: - User Selection
 
-    @State private var selectedTarget = 108
+    @State private var selectedTarget = 11
 
     @State private var selectedMantra = "Om Namah Shivaya"
 
@@ -44,6 +44,8 @@ struct ChantView: View {
     @State private var showCustomMantraSheet = false
 
     @State private var completedRounds = 0
+    
+    @Environment(\.modelContext) private var modelContext
 
     // MARK: - Dynamic Values
 
@@ -59,6 +61,28 @@ struct ChantView: View {
 
     private var activeBead: Int {
         min(count, beadCount - 1)
+    }
+  
+    // MARK: - Save Completed Chant Session
+
+    private func saveChantSession() {
+
+        guard count > 0 else { return }
+
+        let session = JapaSession(
+            mantraTitle: selectedMantra,
+            sessionDate: .now,
+            chantCount: count
+        )
+
+        modelContext.insert(session)
+
+        do {
+            try modelContext.save()
+            print("Successfully saved \(count) chants!")
+        } catch {
+            print("Failed to save chanting session: \(error.localizedDescription)")
+        }
     }
 
     
@@ -132,6 +156,7 @@ struct ChantView: View {
                         ) {
                             soundEnabled.toggle()
                         }
+                        .malaGlass(in: Capsule())
                         
                         settingButton(
                             title: vibrationEnabled
@@ -142,6 +167,7 @@ struct ChantView: View {
                         ) {
                             vibrationEnabled.toggle()
                         }
+                        .malaGlass(in: Capsule())
                     }
                     .padding(.top, 18)
                     
@@ -155,10 +181,16 @@ struct ChantView: View {
                         Text("Reset")
                             .font(.system(size: 17, weight: .medium))
                             .foregroundStyle(AppColors.secondaryText)
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: 100)
                             .padding(.vertical, 12)
                     }
                     .buttonStyle(.plain)
+                    .background(
+                        AppColors.cardBackground.opacity(0.25),
+                        in: RoundedRectangle(cornerRadius: 18)
+                    )
+                    .malaGlass(in: Capsule())
+                    
                     
                     Spacer(minLength: 12)
                 }
@@ -169,9 +201,9 @@ struct ChantView: View {
         }
         .alert("Finish your practice?", isPresented: $showFinishAlert) {
 
-            Button("Continue chanting", role: .cancel) { }
+            Button("Continue", role: .cancel) { }
 
-            Button("Finish", role: .destructive) {
+            Button("Reset", role: .destructive) {
                 count = 0
             }
 
@@ -286,6 +318,11 @@ struct ChantView: View {
                             )
                     }
                     .buttonStyle(.plain)
+                    .malaGlass(in: Capsule())
+                    .animation(
+                        .spring(response: 0.4, dampingFraction: 0.75),
+                        value: selectedTarget
+                    )
                 }
             }
         }
@@ -422,10 +459,12 @@ struct ChantView: View {
             )
         }
         .buttonStyle(.plain)
+        .malaGlass(in: Capsule())
         .disabled(isCompleting)
     }
-    
-    //MARK: completeMala
+        
+    // MARK: - Complete Mala
+
     private func completeMala() {
 
         guard !isCompleting else { return }
@@ -433,23 +472,26 @@ struct ChantView: View {
         isCompleting = true
         completedRounds += 1
 
-        // Gentle completion vibration
+        // Save completed chanting session
+        saveChantSession()
+
+        // Completion vibration
         if vibrationEnabled {
             UINotificationFeedbackGenerator()
                 .notificationOccurred(.success)
         }
 
-        // Optional completion sound
+        // Completion sound
         if soundEnabled {
             AudioServicesPlaySystemSound(1025)
         }
 
-        // Subtle bead pulse
+        // Celebration animation
         withAnimation(.easeInOut(duration: 0.3)) {
             isCelebrating = true
         }
 
-        // Reset for the next round
+        // Reset for next round
         Task { @MainActor in
 
             try? await Task.sleep(
@@ -463,7 +505,6 @@ struct ChantView: View {
             }
         }
     }
-
 
 
     // MARK: - Setting Button
@@ -644,8 +685,6 @@ struct MalaProgressRing: View {
         return AppColors.cardBackground
     }
 }
-
-
 
 // MARK: - Preview
 
