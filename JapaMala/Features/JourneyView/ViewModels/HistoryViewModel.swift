@@ -1,5 +1,5 @@
 //
-//  JourneyViewModel.swift
+//  HistoryViewModel.swift
 //  JapaMala
 //
 //  Created by Akash Belekar on 24/11/26.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct JourneyViewModel {
+struct HistoryViewModel {
 
     let sessions: [JapaSession]
 

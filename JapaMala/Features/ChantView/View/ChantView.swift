@@ -22,9 +22,10 @@ struct ChantView: View {
     
     @State private var isCompleting = false
     @State private var isCelebrating = false
+    
     // MARK: - Chant Options
 
-    private let chantOptions = [11, 21, 51, 108]
+    private let chantOptions = [11, 21, 54, 108]
 
     private let mantraOptions = [
         "Om Namah Shivaya",
@@ -429,7 +430,6 @@ struct ChantView: View {
             if nextCount == totalChants {
                 completeMala()
             } else {
-
                 if vibrationEnabled {
                     UIImpactFeedbackGenerator(style: .light)
                         .impactOccurred()
@@ -445,7 +445,7 @@ struct ChantView: View {
             HStack(spacing: 14) {
 
                 Image(systemName: "plus")
-                    .font(.system(size: 25))
+                    .font(.system(size: 25, weight: .medium))
 
                 Text("Tap to count")
                     .font(.system(size: 21, weight: .semibold))
@@ -453,16 +453,24 @@ struct ChantView: View {
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .frame(height: 64)
-            .background(
-                AppColors.primary,
-                in: RoundedRectangle(cornerRadius: 24)
-            )
+            .background {
+                Capsule()
+                    .fill(AppColors.primary)
+                    .malaGlass(in: Capsule())
+            }
+            .overlay {
+                Capsule()
+                    .strokeBorder(
+                        Color.white.opacity(0.25),
+                        lineWidth: 1
+                    )
+            }
         }
         .buttonStyle(.plain)
-        .malaGlass(in: Capsule())
         .disabled(isCompleting)
+        .opacity(isCompleting ? 0.7 : 1)
     }
-        
+
     // MARK: - Complete Mala
 
     private func completeMala() {

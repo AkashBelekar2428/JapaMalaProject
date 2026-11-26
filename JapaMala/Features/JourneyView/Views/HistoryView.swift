@@ -1,5 +1,5 @@
 //
-//  JourneyView.swift
+//  HistoryView.swift
 //  JapaMala
 //
 //  Created by Akash Belekar on 24/11/26.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct JourneyView: View {
+struct HistoryView: View {
 
     @Query(
         sort: \JapaSession.sessionDate,
@@ -16,8 +16,8 @@ struct JourneyView: View {
     )
     private var sessions: [JapaSession]
 
-    private var journeyViewModel: JourneyViewModel {
-        JourneyViewModel(sessions: sessions)
+    private var historyViewModel: HistoryViewModel {
+        HistoryViewModel(sessions: sessions)
     }
 
     var body: some View {
@@ -35,11 +35,11 @@ struct JourneyView: View {
                         .foregroundStyle(AppColors.accent)
 
                     Text("Your quiet growth.")
-                        .font(.system(size: 38, design: .serif))
+                        .font(.system(size: 32, design: .serif))
                         .foregroundStyle(AppColors.primaryText)
 
                     Text("A little more present, one day at a time.")
-                        .font(.system(size: 18))
+                        .font(.system(size: 20))
                         .foregroundStyle(AppColors.secondaryText)
                 }
                 .padding(.top, 30)
@@ -47,20 +47,20 @@ struct JourneyView: View {
                 // MARK: Weekly Progress
 
                 WeeklyProgressCard(
-                    viewModel: journeyViewModel
+                    viewModel: historyViewModel
                 )
 
                 // MARK: Statistics
 
                 HStack(spacing: 14) {
 
-                    JourneyStatCard(
-                        value: journeyViewModel.totalMalas,
+                    HistoryStatCard(
+                        value: historyViewModel.totalMalas,
                         title: "Malas completed"
                     )
 
-                    JourneyStatCard(
-                        value: journeyViewModel.totalChants,
+                    HistoryStatCard(
+                        value: historyViewModel.totalChants,
                         title: "Chants offered"
                     )
                 }
@@ -93,7 +93,7 @@ struct JourneyView: View {
 }
 
 #Preview {
-    JourneyView()
+    HistoryView()
         .modelContainer(
             for: JapaSession.self,
             inMemory: true

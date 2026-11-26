@@ -25,16 +25,17 @@ struct HomeView: View {
 
             ScrollView(showsIndicators: false) {
 
-                VStack(alignment: .leading, spacing: 24) {
+                VStack(alignment: .leading, spacing: 14) {
 
                     // MARK: Header
 
                     headerSection
+                        
 
                     // MARK: Welcome
 
                     welcomeSection
-                        .padding(.top, 16)
+                        .padding(.top, 8)
 
                     // MARK: Daily Ritual
 
@@ -45,11 +46,11 @@ struct HomeView: View {
                     // MARK: Reminder
 
                     reminderSection
-                        .padding(.top, 16)
+                        .padding(.top, 8)
                 }
                 .padding(.horizontal, 24)
-                .padding(.top, 20)
-                .padding(.bottom, 100)
+                .padding(.top, 10)
+                .padding(.bottom, 10)
             }
         }
         .preferredColorScheme(.light)
@@ -88,7 +89,7 @@ struct HomeView: View {
 
     private var welcomeSection: some View {
 
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading, spacing: 4) {
 
             Text("A slower start. A softer day.")
                 .font(.system(size: 14, weight: .regular))
