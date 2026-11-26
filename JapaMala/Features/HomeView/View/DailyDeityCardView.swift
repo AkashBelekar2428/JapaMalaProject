@@ -5,7 +5,6 @@
 //  Created by Akash Belekar on 25/11/26.
 //
 
-
 import SwiftUI
 
 struct DailyDeityCard: View {
@@ -56,11 +55,19 @@ struct DailyDeityCard: View {
 
                     ZStack {
                         Circle()
-                            .fill(AppColors.surface)
+                            .fill(AppColors.surface.opacity(0.8))
                             .frame(width: 88, height: 88)
 
-                        Text(deity.symbol)
-                            .font(.system(size: 42))
+                        Image(deity.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 90, height: 90)
+                            .clipShape(.circle)
+                            .background(
+                                Capsule()
+                                    .fill(AppColors.primary.opacity(0.88))
+                                    .malaGlass(in: Capsule())
+                            )
                     }
                     .accessibilityHidden(true)
 
@@ -113,10 +120,11 @@ struct DailyDeityCard: View {
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 14)
                 .padding(.vertical, 20)
-                .background(AppColors.surface)
-                .clipShape(
+                .background {
                     RoundedRectangle(cornerRadius: 24)
-                )
+                        .fill(AppColors.surface.opacity(0.55))
+                        .malaGlass(in: RoundedRectangle(cornerRadius: 24))
+                }
 
                 // MARK: Chant Button
 
@@ -139,17 +147,21 @@ struct DailyDeityCard: View {
                     .padding(.horizontal, 20)
                     .frame(maxWidth: .infinity)
                     .frame(height: 58)
-                    .background(AppColors.primary)
-                    .clipShape(Capsule())
+                    .background {
+                        Capsule()
+                            .fill(AppColors.primary.opacity(0.88))
+                            .malaGlass(in: Capsule())
+                    }
                 }
                 .buttonStyle(.plain)
             }
             .padding(22)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(AppColors.cardBackground)
-            .clipShape(
+            .background {
                 RoundedRectangle(cornerRadius: 28)
-            )
+                    .fill(AppColors.cardBackground.opacity(0.75))
+                    .malaGlass(in: RoundedRectangle(cornerRadius: 28))
+            }
         }
     }
 }

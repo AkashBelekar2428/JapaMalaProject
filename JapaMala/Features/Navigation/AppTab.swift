@@ -21,7 +21,7 @@ enum AppTab: String, CaseIterable, Identifiable {
     case home
     case chant
     case mantras
-    case journey
+    case history
 
     var id: String {
         rawValue
@@ -36,8 +36,8 @@ enum AppTab: String, CaseIterable, Identifiable {
             return "Chant"
         case .mantras:
             return "Mantras"
-        case .journey:
-            return "Journey"
+        case .history:
+            return "History"
         }
     }
 
@@ -50,7 +50,7 @@ enum AppTab: String, CaseIterable, Identifiable {
             return "Chant_icon"
         case .mantras:
             return "Mantras_icon"
-        case .journey:
+        case .history:
             return "Journey_icon"
         }
     }

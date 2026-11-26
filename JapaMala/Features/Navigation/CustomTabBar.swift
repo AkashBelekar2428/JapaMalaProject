@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//Home · Chant · Mantras · Journey
+//Home · Chant · Mantras · History
 //MARK: Controls the tab bar UI and animation.
 struct CustomTabBar: View {
     

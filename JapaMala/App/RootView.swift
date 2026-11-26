@@ -49,8 +49,8 @@ struct RootView: View {
                 case .mantras:
                     MantraView()
 
-                case .journey:
-                    JourneyView()
+                case .history:
+                    HistoryView()
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

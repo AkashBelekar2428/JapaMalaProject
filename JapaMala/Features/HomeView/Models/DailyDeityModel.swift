@@ -135,15 +135,15 @@ enum DailyDeity: Int, CaseIterable, Identifiable {
 
     // MARK: - Emoji
 
-    var symbol: String {
+    var imageName: String {
         switch self {
-        case .monday: return "🔱"
-        case .tuesday: return "🙏"
-        case .wednesday: return "🐘"
-        case .thursday: return "🪷"
-        case .friday: return "🌸"
-        case .saturday: return "🪔"
-        case .sunday: return "☀️"
+        case .monday:    return "shiva.png"
+        case .tuesday:   return "hanuman.png"
+        case .wednesday: return "ganesha.png"
+        case .thursday:  return "vishnu.png"
+        case .friday:    return "lakshmi.png"
+        case .saturday:  return "shanidev.png"
+        case .sunday:    return "suryadev.png"
         }
     }
     

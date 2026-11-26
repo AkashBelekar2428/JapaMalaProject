@@ -9,140 +9,88 @@ import SwiftUI
 
 struct WeeklyProgressCard: View {
 
-    let viewModel: JourneyViewModel
+    let viewModel: HistoryViewModel
 
     private let chartHeight: CGFloat = 110
 
     var body: some View {
-
+        
         VStack(alignment: .leading, spacing: 24) {
-
+            
             // MARK: Header
-
+            
             HStack {
                 Text("This week")
                     .font(.system(size: 23, weight: .semibold))
                     .foregroundStyle(AppColors.primaryText)
-
+                
                 Spacer()
-
+                
                 Text(viewModel.weekDateRange)
                     .font(.system(size: 15))
                     .foregroundStyle(AppColors.secondaryText)
             }
-
+            
             // MARK: Practice Days
-
+            
             HStack(alignment: .center, spacing: 12) {
-
+                
                 Text("\(viewModel.weeklyPracticeDays)")
                     .font(.system(size: 76, weight: .regular, design: .serif))
                     .foregroundStyle(AppColors.primaryText)
                     .contentTransition(.numericText())
-
+                
                 VStack(alignment: .leading, spacing: 3) {
                     Text("days of showing up")
                     Text("for yourself")
                 }
                 .font(.system(size: 17))
                 .foregroundStyle(AppColors.primaryText)
-
+                
                 Spacer()
             }
             .padding(.vertical, 4)
-
+            
             // MARK: Weekly Chant Progress
-
+            
             VStack(alignment: .leading, spacing: 16) {
-
+                
                 HStack {
                     Text("Daily chanting")
                         .font(.system(size: 18, weight: .semibold))
                         .foregroundStyle(AppColors.primaryText)
-
+                    
                     Spacer()
-
+                    
                     Text("\(viewModel.weeklyChants.formatted()) chants")
                         .font(.system(size: 14, weight: .medium))
                         .foregroundStyle(AppColors.secondaryText)
                 }
-
+                
                 // MARK: Vertical Progress Bars
-
+                
+                
                 HStack(alignment: .bottom, spacing: 10) {
 
-                    ForEach(
-                        Array(viewModel.weekDates.enumerated()),
-                        id: \.offset
-                    ) { index, date in
+                    ForEach(viewModel.weekDates, id: \.self) { date in
 
                         let count = viewModel.dailyChantCount(on: date)
 
-                        let maximum = max(
-                            viewModel.highestDailyChantCount,
-                            1
-                        )
-
-                        let barHeight: CGFloat = count == 0
-                            ? 4
-                            : max(
-                                8,
-                                CGFloat(count) / CGFloat(maximum) * chartHeight
-                            )
-
-                        VStack(spacing: 9) {
-
-                            // Chant Count
-
-                            Text(count.formatted())
-                                .font(.system(size: 11, weight: .medium))
-                                .foregroundStyle(AppColors.secondaryText)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.7)
-
-                            // Bar Background
-
-                            ZStack(alignment: .bottom) {
-
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(
-                                        AppColors.background.opacity(0.9)
-                                    )
-
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(
-                                        viewModel.isToday(date)
-                                        ? AppColors.primary
-                                        : AppColors.primary.opacity(0.65)
-                                    )
-                                    .frame(height: barHeight)
-                            }
-                            .frame(height: chartHeight)
-
-                            // Weekday Label
-
-                            Text(viewModel.weekdayLabel(for: date))
-                                .font(.system(size: 14, weight: .medium))
-                                .foregroundStyle(
-                                    viewModel.isToday(date)
-                                    ? AppColors.primary
-                                    : AppColors.secondaryText
-                                )
-                        }
-                        .frame(maxWidth: .infinity)
-                        .accessibilityElement(children: .ignore)
-                        .accessibilityLabel(
-                            "\(date.formatted(date: .complete, time: .omitted)), \(count) chants"
-                        )
-                        .accessibilityAddTraits(
-                            viewModel.isToday(date) ? .isSelected : []
+                        WeeklyChartDay(
+                            date: date,
+                            count: count,
+                            maximum: viewModel.highestDailyChantCount,
+                            chartHeight: chartHeight,
+                            weekday: viewModel.weekdayLabel(for: date),
+                            isToday: viewModel.isToday(date)
                         )
                     }
                 }
                 .frame(height: chartHeight + 45)
 
+                
                 // MARK: Empty State
-
+                
                 if viewModel.weeklyChants == 0 {
                     Text("Your chanting journey starts with one mantra.")
                         .font(.system(size: 14))
@@ -154,9 +102,23 @@ struct WeeklyProgressCard: View {
             }
         }
         .padding(25)
-        .background(AppColors.cardBackground)
-        .clipShape(
-            RoundedRectangle(cornerRadius: 32)
+        .background {
+            RoundedRectangle(cornerRadius: 32, style: .continuous)
+                .fill(AppColors.cardBackground.opacity(0.65))
+                .malaGlass(in: RoundedRectangle(cornerRadius: 32, style: .continuous))
+        }
+        .overlay {
+            RoundedRectangle(cornerRadius: 32, style: .continuous)
+                .strokeBorder(
+                    AppColors.surface.opacity(0.8),
+                    lineWidth: 1
+                )
+        }
+        .shadow(
+            color: AppColors.primaryText.opacity(0.06),
+            radius: 16,
+            x: 0,
+            y: 8
         )
         .animation(
             .easeInOut(duration: 0.35),
