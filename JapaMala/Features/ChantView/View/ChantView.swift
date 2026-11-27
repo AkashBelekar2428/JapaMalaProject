@@ -23,6 +23,8 @@ struct ChantView: View {
     @State private var isCompleting = false
     @State private var isCelebrating = false
     
+    @Binding var incomingMantra: String?
+    
     // MARK: - Chant Options
 
     private let chantOptions = [11, 21, 54, 108]
@@ -274,7 +276,29 @@ struct ChantView: View {
             }
             .presentationDetents([.medium])
         }
+        .onAppear {
+            applyIncomingMantra()
+        }
+        .onChange(of: incomingMantra) { _, newValue in
+            applyIncomingMantra()
+        }
 
+    }
+    // MARK: - Receive Daily Mantra
+
+    private func applyIncomingMantra() {
+
+        guard let mantra = incomingMantra,
+              !mantra.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        else {
+            return
+        }
+
+        selectMantra(mantra)
+
+        // Clear after receiving so the same mantra
+        // can be selected again on another button tap.
+        incomingMantra = nil
     }
     
     
@@ -329,6 +353,10 @@ struct ChantView: View {
         }
         .disabled(isCompleting)
     }
+    
+    private var totalRounds: Int {
+        max(1, selectedTarget / 108)
+    }
 
 
     // MARK: - Header
@@ -343,8 +371,8 @@ struct ChantView: View {
 
             Spacer()
 
-            Text("Mala 1 of 1")
-                .font(.system(size: 14, weight: .regular))
+            Text("\(completedRounds + 0) MALA DONE")
+                .font(.system(size: 14, weight: .medium))
                 .foregroundStyle(AppColors.secondaryText)
         }
     }
@@ -697,6 +725,6 @@ struct MalaProgressRing: View {
 // MARK: - Preview
 
 #Preview {
-    ChantView()
+    ChantView(incomingMantra: .constant(nil))
         .background(AppColors.background)
 }
