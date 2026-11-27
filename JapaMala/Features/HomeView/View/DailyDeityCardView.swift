@@ -9,8 +9,8 @@ import SwiftUI
 
 struct DailyDeityCard: View {
 
-    let onBeginPractice: () -> Void
-
+    let onBeginPractice: (String) -> Void
+    
     var body: some View {
 
         TimelineView(.periodic(from: .now, by: 60 * 60)) { context in
@@ -128,7 +128,9 @@ struct DailyDeityCard: View {
 
                 // MARK: Chant Button
 
-                Button(action: onBeginPractice) {
+                Button {
+                    onBeginPractice(deity.mantra)
+                } label: {
 
                     HStack(spacing: 12) {
 

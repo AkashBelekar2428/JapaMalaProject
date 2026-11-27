@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  JapaMala
 //
 //  Created by Akash Belekar on 20/11/26.
@@ -13,6 +13,9 @@ struct HomeView: View {
     // MARK: - Properties
     var onBeginPractice: () -> Void
     var onSettingsTap: () -> Void
+    
+    @Binding var dailyMantraToChant: String?
+
 
     // MARK: - Body
 
@@ -39,7 +42,10 @@ struct HomeView: View {
 
                     // MARK: Daily Ritual
 
-                    DailyDeityCard {
+                    DailyDeityCard { mantra in
+
+                        dailyMantraToChant = mantra
+
                         onBeginPractice()
                     }
 

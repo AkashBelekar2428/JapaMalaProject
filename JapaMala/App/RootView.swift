@@ -17,7 +17,11 @@ struct RootView: View {
 
     @State private var selectedTab: AppTab = .home
     @State private var showSettings = false
-
+    
+    @State private var dailyMantraToChant: String? = nil
+    
+   // @Binding var dailyMantraToChant: String?
+    
     var body: some View {
 
         ZStack {
@@ -35,16 +39,18 @@ struct RootView: View {
                             selectedTab = .chant
                         },
                         onSettingsTap: {
-                            // Navigate to Settings screen
-                            showSettings = true
-                        }
+                            // Settings navigation
+                        },
+                        dailyMantraToChant: $dailyMantraToChant
                     )
                     .sheet(isPresented: $showSettings) {
                         SettingsView()
                     }
 
                 case .chant:
-                    ChantView()
+                    ChantView(
+                        incomingMantra: $dailyMantraToChant
+                    )
 
                 case .mantras:
                     MantraView()
